@@ -1,0 +1,311 @@
+/* Ensure no default margin or padding creates overflow */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;   /* Block horizontal scrolling */
+  scroll-behavior: smooth;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Set a default font */
+}
+
+/* Apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scroll snapping container */
+.oilweb {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* Each full-screen scroll section */
+.snap-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  font-size: 3rem;
+  color: #000;
+}
+
+/* Background image section */
+.section1 {
+  position: relative;
+  height: 100vh;
+  background: url('bg6.png') no-repeat center center fixed;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.section1::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 40, 42, 0.648); 
+  z-index: 1;
+}
+
+.section1 > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Other sections (empty for now) */
+.section2, .section3, .section4 {
+  height: 100vh;
+}
+
+/* Image styling */
+.img1 {
+  width: 50px;
+  height: 50px;
+  margin-left: 39px;
+  transition: transform 0.3s ease;
+}
+.img1:hover {
+  transform: scale(1.2);
+}
+
+/* Top left heading section */
+.pg1 {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 550px;
+  font-family: 'Comic Sans MS', cursive;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+}
+
+
+.pg2 {
+  margin-top: 95px;
+  font-size: 20px;
+  color: white;
+  margin-left: 180px;
+  text-align: center;
+}
+
+.pg2 a {
+  color: white;
+  text-decoration: none;
+  margin-right: 100px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.pg2 a:hover {
+  color: rgb(195, 181, 54);
+  font-family: 'Pristina', cursive;
+}
+
+
+img, div {
+  max-width: 100%;
+  overflow: hidden;
+}
+.pg3 span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 90%;
+}
+.go{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section2::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 40, 42, 0.648); 
+  z-index: 1;
+}
+.section2{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url('4.png') no-repeat  fixed;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden;
+}
+.section3::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 40, 42, 0.648); 
+  z-index: 1;
+}
+.section3{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url('4.png') no-repeat  fixed;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden;
+}
+.section4::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 40, 42, 0.648); 
+  z-index: 1;
+}
+.section4{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url('4.png') no-repeat  fixed;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden;
+}
+.section5::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 40, 42, 0.648); 
+  z-index: 1;
+}
+.section5{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url('4.png') no-repeat  fixed;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden;
+}
+.section6::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 40, 42, 0.648); 
+  z-index: 1;
+}
+.section6{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url('4.png') no-repeat  fixed;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden;
+}
+ *{
+  font-size: 20px;
+ }
+.contact h1 {
+  font-size: 190px bold;
+  color: #000000;
+  text-align: center;
+  font-family: 'comic sans ms', cursive;
+  text-decoration: underline;
+  text-decoration-color: #e6e208;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 20px;
+}
+
+.contact p {
+  font-size: 50px bold;
+  color: #000000;
+  text-align: center;
+  font-family: 'comic sans ms', cursive;
+} 
+.contact ul {
+  list-style-type: none;
+  padding: 8px;
+  text-align: center bold;
+  
+  color: #040000 ;
+  margin-left: 35%;
+  margin-right: 30%;
+ border: #000000 10px solid;
+ border-radius: 20px;
+ border-style: double;
+ margin-top: 5%;
+  width: 400px;
+ 
+
+  font-family: 'comic sans ms', cursive;
+  font-size: 80px;
+}
+
+  
+
+.sum{
+margin-left: 75%;
+size-adjust: 300px;
+}
+#sum {
+  width: 500px;
+  height: 500px;
+ 
+}
+.aus h2 {
+  font-size: 190px bold;
+  color: #000000;
+  text-align: center;
+  font-family: 'comic sans ms', cursive;
+  text-decoration: underline;
+  text-decoration-color: #e6e208;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 20px;
+}
+.aus p {
+  font-size: 50px bold;
+  color: #000000;
+  text-align: center;
+  font-family: 'comic sans ms', cursive;
+  line-gap-override: 2.5;
+}
+  .abcd {
+    display: inline-block;
+    margin-right: 20px; /* spacing between tables */
+    vertical-align: top;
+    margin-top: 8%;
+    margin-left: 20%;
+    font-family: 'comic sans ms', cursive;
+    font-size: 30px;
+
+  }
+  table {
+    border-collapse: collapse;
+    width: 250px; /* Adjust width as needed */
+    margin-bottom: 20px;
+     height: 250px;
+  }
